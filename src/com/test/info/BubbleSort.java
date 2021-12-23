@@ -17,9 +17,16 @@ package com.test.info;
  * 直至内层循环退出
  * 3.if语句，判断flag!=i;flag=i(证明当前元素比后面的任何一个元素都要小，因此flag没有被赋值，flag=j)
  *
+ * @ 插入法排序
+ *
+ *
+ * 快捷键记忆：
+ * ctrl+ "-" / "+"代码折叠和展开
+ *
+ *
  * */
 public class BubbleSort {
-	// 冒泡排序排序方法
+	// 1.冒泡排序排序方法
 	public void bubbleSort(int[] arr) {
 		//	n个数，需要n-1趟就可以作升序排列
 		for (int i = 1; i < arr.length; i++) {
@@ -63,6 +70,23 @@ public class BubbleSort {
 		}
 	}
 
+	// 方法3：插入法排序
+	public void insertedSort(int arr[]) {
+		int i, j, temp;
+		for (i = 1; i < arr.length; i++) {
+			//	初始设置，比较的基准值temp，和基准索引j
+			temp = arr[i];
+			j = i;
+			if (arr[j - 1] > temp) {
+				while (j >= 1 && arr[j - 1] > temp) {
+					arr[j] = arr[j - 1];
+					j--;
+				}
+			}
+			arr[j] = temp;
+		}
+	}
+
 	public static void main(String[] args) {
 		// 实例化一个对象
 		BubbleSort bs = new BubbleSort();
@@ -81,6 +105,13 @@ public class BubbleSort {
 		System.out.println("选择法升序排序后的数组：");
 		for (int elm : arr1) {
 			System.out.print(elm + "\t");
+		}
+		System.out.println("");
+		int arr3[] = {112, 35, 6, 7, 8, 36, 36, 19};
+		bs.insertedSort(arr3);
+		System.out.println("插入法排序的结果是：");
+		for (int ele : arr3) {
+			System.out.print(ele + "\t");
 		}
 		System.out.println("");
 		final int C = 13 / 10;
