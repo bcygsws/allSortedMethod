@@ -95,7 +95,7 @@ public class BubbleSort {
 		}
 	}
 
-	// 方法4：归并排序 递归函数来分治，合并函数来归并
+	// 方法4：归并排序注意分析：递归函数来分治，合并函数来归并
 	public void merged(int arr[], int left, int middle, int right) {
 		// 临时存储子序列的数组为a[]
 		int a[] = new int[arr.length];
