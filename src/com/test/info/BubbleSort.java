@@ -2,7 +2,8 @@ package com.test.info;
 
 /*
  *
- * @冒泡排序 假设数组中元素个数为n，n=arr.length;
+ * 此为四种排序：冒泡排序、选择排序、插入排序、归并排序
+ * @一、冒泡排序 假设数组中元素个数为n，n=arr.length;
  * a. i=1开始，i<arr.length；[1,arr.length-1],刚好是1，2,3,4，……n-1趟
  * b. 为了使得代码整齐有序，j也从1开始，为了覆盖，arr[0],需要比较的两个相邻元素一定是arr[j-1]和arr[j]
  * c. 关于j的范围，是每一轮缩小一个，j<=arr.length-i;
@@ -10,21 +11,21 @@ package com.test.info;
  * 依据下面代码，两个相等的数位置不会移动
  * 最坏时间复杂度为：n-1,n-2,……3,2,1 n*(n-1)/2 ,即o(n^2);
  *
- * @ 选择排序 (实际上也用到了交换，每趟temp和起始的arr[i]交换)
+ * @ 二、选择排序 (实际上也用到了交换，每趟temp和起始的arr[i]交换)
  * 1.设定一个标志位flag,设定一个最小值存储变量temp,flag和temp的初始值，为flag=0,temp=arr[i]
  * arr[0];
  * 2.内层for循环，j=i+1; temp>a[j],要标记下这一趟中最小值temp,并记下temp对应元素的当前标记flag
  * 直至内层循环退出
  * 3.if语句，判断flag!=i;flag=i(证明当前元素比后面的任何一个元素都要小，因此flag没有被赋值，flag=j)
  *
- * @ 插入法排序(都是从比较相邻的数字开始，排序前面的数字不干涉后面的)
+ * @ 三、插入法排序(都是从比较相邻的数字开始，排序前面的数字不干涉后面的)
  * 1.外层循环，确定排序所需要的趟数。i取值从【1，n】
  * 2.设定比较的初始值temp和移动的索引j 。对于每一趟 temp=arr[i];j=i;
  * 3.先使用if语句作判断，比较arr[j-1]和temp的大小；如果arr[j-1]小于temp;直接转到arr[j]=temp;
  * 如果arr[j-1]>temp;则流程进入while循环，while(j>=1&&arr[j-1]>temp)
  * 4.前面数字arr[j-1]>temp;将arr[j-1]的值赋给arr[j];即：arr[j]=arr[j-1];
  *
- *  @ 归并排序
+ *  @ 四、归并排序
  *  1.递归函数实现分治
  *  2.merge函数实现合并
  *
@@ -126,6 +127,7 @@ public class BubbleSort {
 
 
 	}
+
 
 	public void interitoredSort(int arr[], int left, int right) {
 		if (left < right) {
