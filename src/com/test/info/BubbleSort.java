@@ -63,6 +63,7 @@ public class BubbleSort {
 			flag = i;
 			// 一趟下来，可以找到该趟中的最小temp
 			for (j = i + 1; j < arr.length; j++) {
+				// temp是该趟的最小数，arr[j]是依次动态变化的序列中元素值
 				if (temp > arr[j]) {
 					temp = arr[j];
 					flag = j;
