@@ -81,7 +81,7 @@ public class BubbleSort {
 		}
 	}
 
-	// 方法3：插入法排序
+	// 方法3：插入法排序。第一趟插入了前两个数，以后每一趟插入1个数，直至将所有的数字从小到大依次完成排列
 	public void insertedSort(int arr[]) {
 		int i, j, temp;
 		for (i = 1; i < arr.length; i++) {
