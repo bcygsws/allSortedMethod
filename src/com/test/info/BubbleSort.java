@@ -66,11 +66,6 @@ public class BubbleSort {
 			for (j = i + 1; j < arr.length; j++) {
 				// temp：该趟的起始值，temp随着同arr[j]的比较而赋值，arr[j]除了基准元素temp,
 				// 后面的元素依次同temp作比较
->>>>>>> select
-=======
-				// temp：该趟的起始值，temp随着同arr[j]的比较而赋值，arr[j]除了基准元素temp,
-				// 后面的元素依次同temp作比较
->>>>>>> select
 				if (temp > arr[j]) {
 					temp = arr[j];
 					flag = j;
